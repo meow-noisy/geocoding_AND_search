@@ -5,7 +5,7 @@
 
 ## セットアップ
 - パッケージのインストール
-    - `pip install -r requirements.txt`
+    - `$ pip install -r requirements.txt`
 - `.env`ファイルの作成
     - `.env.example`にお手本ファイルがあるので、それを編集し、`.env`にリネームするとよい。
 
@@ -17,12 +17,12 @@
         - tips: YOLP APIは検索ワードによって返す候補の店舗数がことなるのでいくつか試してみるとよい("スターバックスコーヒー"、"Starbucks Coffee"、"スタバ")
         - `<出力ディレクトリ>`下に結果の店舗リストがtsvファイルとして出力されている。
 2. 2店舗の位置座標リストを元に、各拠点同士の距離を計算し、距離がしきい値未満のペアを表示する。
-    - `python calc_dist.py <店舗名1> <店舗名2> <tsvのあるディレクトリ> [(任意)しきい値の距離(km)]`
+    - `$ python calc_dist.py <店舗名1> <店舗名2> <tsvのあるディレクトリ> [(任意)しきい値の距離(km)]`
 
 ### 使用例
 1. `$ python get_shop_geo.py スタバ output`
 1. `$ python get_shop_geo.py フランフラン output`
-1. `python calc_dist.py スタバ フランフラン output 0.2`
+1. `$ python calc_dist.py スタバ フランフラン output 0.2`
 1. 結果
 ```tsv
 ['スターバックスコーヒー くずはモール店', 'Ｆｒａｎｃｆｒａｎｃくずはモール店', 0.09441566021250594]
